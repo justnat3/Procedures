@@ -1,11 +1,8 @@
 <script>
 	export let title;
 	export let description;
-	console.log(title);
-	console.log(description)
 </script>
 
-<h1> I'm here!</h1>
 <ion-content>
 	<ion-card>
 		<ion-card-header>

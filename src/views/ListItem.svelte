@@ -2,16 +2,8 @@
     import { Link, Route } from 'svelte-routing';
 
 	// visable
-	export let title;
+    export let title;
     export let description;
-    // not visable
-    export let id;
-
-    const strip_space = (title) => {
-        var title = title.replace(/ /g, "-").toLowerCase();
-        return title
-    }
-
 </script>
 
 <ion-item>

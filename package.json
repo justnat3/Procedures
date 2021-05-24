@@ -19,8 +19,14 @@
   },
   "dependencies": {
     "@ionic/storage": "^3.0.4",
-    "mongoose": "^5.12.9",
+    "cordova": "^10.0.0",
+    "ionic": "^5.4.16",
     "sirv-cli": "^1.0.0",
     "svelte-routing": "^1.6.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-sqlite-storage": {}
+    }
   }
 }

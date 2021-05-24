@@ -7,7 +7,11 @@
 	export let description;
 
     // Native storage Setup
-    const storage_service = getContext('storage_service');
+    let storage_service = getContext('storage_service');
+
+    const sub = storage_service.subscribe(val => {
+        storage_service = val;
+    })
 
     function set_test_steps() {
         let steps = [];
@@ -15,7 +19,7 @@
         steps.push(storage_service.get_data('boot to pxe'));
         return steps
     }
-    
+
     let items = set_test_steps();
 
 </script>

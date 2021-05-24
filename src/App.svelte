@@ -6,14 +6,18 @@
 
     // Modules 
 	import { Router, Route, Link} from "svelte-routing";
-    import { setContext } from 'svelte';
+    import { writable } from 'svelte/store';
+    import { setContext, getContext } from 'svelte';
 
     // native storage service, service.js
     export let storage_service;
 	export let url = "";
     
+    storage_service.set_data("ree", true);
+    
+    storage_service = writable(storage_service);
     setContext('storage_service', storage_service);
-
+    
 </script>
 
 <svelte:head>

@@ -1,7 +1,7 @@
 // main.js
-import App from './App.svelte';
+import Service from './Service.svelte';
 
-const app = new App({
+const app = new Service({
     target: document.body,
 	hydrate: true
 });

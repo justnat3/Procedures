@@ -1,0 +1,7 @@
+{
+  "name": "Procedures",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "custom"
+}

@@ -1,7 +1,6 @@
 <script>
     // create an empty array for future procedure fields
     let field_arr = [];
-
     let submitted = false;
 </script>
     <ion-card >
@@ -9,40 +8,48 @@
         <ion-card-title class="ion-padding">New Procedure</ion-card-title>
             <ion-list>
                 <ion-item class="">
-                    <ion-label position="floating">Title of the Procedure</ion-label>
-                    <ion-input autocapitalize="words" required="true" spellcheck="true"></ion-input>
+                    <ion-label position="stacked">Title</ion-label>
+                    <ion-input placeholder="Grocery List Creation" 
+                               autocapitalize="words" 
+                               required="true" 
+                               spellcheck="true"
+                            />
                 </ion-item>
                 <ion-item class="">
-                    <ion-label position="stacked">Description of the Procedure</ion-label>
-                    <ion-textarea rows="6" cols="20"></ion-textarea>
+                    <ion-textarea placeholder="Description of the Procedure" 
+                                  rows="6" cols="20"
+                                />
                 </ion-item>
             </ion-list>
         </ion-card-content>
-    </ion-card>
 
-    <ion-card>
         <ion-card-content>
         <ion-card-title class="ion-padding">Add Steps</ion-card-title>
             <ion-list>
                 <ion-item class="">
-                    <ion-label position="floating">Title of the Procedure</ion-label>
-                    <ion-input autocapitalize="words" required="true" spellcheck="true"></ion-input>
+                    <ion-label position="stacked">Instruction</ion-label>
+                    <ion-input placeholder="get bananas" 
+                               autocapitalize="words" 
+                               required="true" 
+                               spellcheck="true"
+                            />
                 </ion-item>
             </ion-list>
-        <ion-button color="light">Add Field</ion-button>
+        <ion-button class="ion-padding" color="light">Add Field</ion-button>
+        </ion-card-content>
+
+        <ion-card-content>
+        <ion-card-title class="ion-padding">Steps</ion-card-title>
+            <ion-list>
+            </ion-list>
+        <ion-button slot="start" color="light">Add Field</ion-button>
+        <ion-button slot="end" color="light">Submit</ion-button>
         </ion-card-content>
     </ion-card>
 
-    <ion-card>
-        <ion-card-content>
-        <ion-card-title class="ion-padding">Current steps</ion-card-title>
-            <ion-list>
-                <ion-item class="">
-                    <ion-label position="floating">Title of the Procedure</ion-label>
-                    <ion-input autocapitalize="words" required="true" spellcheck="true"></ion-input>
-                </ion-item>
-            </ion-list>
-        <ion-button color="light">Add Field</ion-button>
-        </ion-card-content>
-    </ion-card>
-<ion-button color="light">Submit</ion-button>
+<style>
+ion-card {
+    --ion-background-color: white;
+    margin: 8px 8px 0 8px;
+}
+</style>

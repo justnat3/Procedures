@@ -1,12 +1,15 @@
-export class StorageService {
-    private _storage = null;
+import { Storage } from '@ionic/storage';
 
-    constructor(private storage) {
+export class StorageService {
+    _storage = null;
+
+    constructor() {
         this.init_storage();
     }
+
     // initalize on-device native storage
     async init_storage() {
-        const storage = await store.create();
+        const storage = await Storage.create();
         this._storage = storage;
     }
 
@@ -19,30 +22,30 @@ export class StorageService {
 
     get_data(key) {
         if (typeof(key) != String) {
-            throw new Error("Key ${key} is not a String");
+            throw new Error(`Key ${key} is not a String`);
         }
-        await this.storage.get(key);
+        await this._storage.get(key);
     }
 
     async remove(key) {
         if (typeof(key) != String) {
             throw new Error("Key ${key} is not a String");
-        await store.remove(key);
+        await this._storage.remove(key);
     }
 
     async clear_data() {
-        await store.clear();
+        await this._storage.clear();
     }
 
     async get_storage_items() {
-        await store.keys();
+        await this._storage.keys();
     }
 
     encrypt_key(key) {
         if (typeof(key) != String) {
             throw new Error("Key ${key} is not a String");
         }
-        store.setEncryptionKey(key);
+        this._storage.setEncryptionKey(key);
     }
 }
 

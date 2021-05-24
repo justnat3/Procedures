@@ -18,6 +18,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@ionic/storage": "^3.0.4",
     "mongoose": "^5.12.9",
     "sirv-cli": "^1.0.0",
     "svelte-routing": "^1.6.0"

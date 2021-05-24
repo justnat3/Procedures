@@ -1,7 +1,7 @@
 <script>
-    import { init_storage } from 'services.js';
+    import { StorageService } from 'services.js';
     import App from './App.svelte';
-    const storage_service = init_storage();
+    const storage_service = new StorageService();
 </script>
 
 {#await promise then storage_service}

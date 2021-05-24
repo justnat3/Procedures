@@ -8,6 +8,7 @@
 
     // Native storage Setup
     let storage_service = getContext('storage_service');
+    console.log(getContext('storage_service'))
 
     const sub = storage_service.subscribe(val => {
         storage_service = val;
@@ -15,7 +16,7 @@
 
     function set_test_steps() {
         let steps = [];
-        storage_service.set_data('boot to pxe', true);
+        storage_service.set_data('boot to pxe', false);
         steps.push(storage_service.get_data('boot to pxe'));
         return steps
     }
@@ -42,7 +43,7 @@
         <ion-list lines="none">
             {#each items as field}
                 <Instruction title={field.title} state={field.state}/>
-            {/each}
+            {/each} 
         </ion-list>
     </ion-card-content>
 </ion-card>

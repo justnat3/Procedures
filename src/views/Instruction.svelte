@@ -10,7 +10,7 @@
                   checked="{state}" 
                   slot="start"
                 />
-    <ion-label text-wrap>{title}</ion-label>
+    <ion-label class="ion-padding" text-wrap>{title}</ion-label>
         <ion-icon style="z-index: 99; margin: 10px;" 
                   size="small" 
                   name="pricetags-outline"

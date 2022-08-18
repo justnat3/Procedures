@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@ionic/storage": "^3.0.4",
-    "cordova": "^10.0.0",
+    "cordova": "^11.0.0",
     "ionic": "^5.4.16",
     "sirv-cli": "^1.0.0",
     "svelte-routing": "^1.6.0"
